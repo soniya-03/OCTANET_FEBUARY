@@ -1,0 +1,237 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Buddy - Flight Price Prediction</title>
+    <style>
+      ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            position: relative;
+            animation: fadeInDown 1s ease;
+        }
+
+        header::before {
+            content: '\1F680'; /* Airplane Emoji */
+            font-size: 48px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            to {
+                transform: translateY(-10px) scale(1.1);
+            }
+        }
+
+        nav {
+            background-color: #2c3e50;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color:black;
+            overflow: hidden;
+        }
+
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+
+        footer {
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .theme-switcher {
+            position: absolute;
+            top: 90px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+
+        .theme-switcher label {
+            margin-right: 10px;
+        }
+
+        .theme-switcher input {
+            appearance: none;
+            width: 40px;
+            height: 20px;
+            background-color: #555;
+            border-radius: 10px;
+            position: relative;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .theme-switcher input:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .theme-switcher input:checked:before {
+            transform: translateX(20px);
+        }
+    </style>
+</head>
+<body>
+  
+
+    <header>
+        Travel Buddy 
+    </header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+     
+  </nav>
+
+    <section>
+        <video autoplay loop muted playsinline>
+            <source src="C:\Users\Soniya Mehta\Downloads\pexels_videos_4105 (1080p).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div>
+            <h1>Your Ultimate Travel Companion</h1>
+            <p>Discover the joy of seamless travel planning with Travel Buddy. Our innovative platform provides accurate predictions for flight prices, allowing you to plan your next adventure with confidence.</p>
+            <p>With Travel Buddy, you can:</p>
+            <ul>
+                <li>Receive real-time flight price predictions.</li>
+                <li>Explore a user-friendly interface for easy navigation.</li>
+                <li>Save money by booking flights at the right time.</li>
+                <li>Access personalized travel recommendations.</li>
+            </ul>
+            <a href="#" class="cta-button">Start Exploring <span style="margin-left: 10px;">✈️</span></a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 Travel Buddy. All rights reserved.
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-theme');
+        });
+    </script>
+</body>
+</html>
